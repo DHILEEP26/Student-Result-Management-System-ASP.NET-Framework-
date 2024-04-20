@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Students_Record_Management_System", "Students_Record_Management_System.csproj", "{D5ED9695-4C83-4AF7-82E0-D714F3D1E022}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D5ED9695-4C83-4AF7-82E0-D714F3D1E022}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5ED9695-4C83-4AF7-82E0-D714F3D1E022}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5ED9695-4C83-4AF7-82E0-D714F3D1E022}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5ED9695-4C83-4AF7-82E0-D714F3D1E022}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45
+		SolutionGuid = {DA375827-58EE-46CE-BC26-A69D3296FB59}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,174 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Students_Record_Management_System.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+        <div>
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark" style="background-color: midnightblue; height: 85px">
+                <a class="navbar-brand" runat="server" href="~/" style="font-family: 'Century Gothic'; display: flex; align-items: center;">
+                    <img src="images/letter-c.png" height="60" width="60" style="margin-left: 10px;">
+                    <p style="margin-left: 5px; font-size: 35px; margin-top: 20px">lover Grades</p>
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between" style="font-size: x-large; font-family: Arial, Helvetica, sans-serif; margin-top: 10px; margin-left: 10px">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/">Home</a></li>
+                        <li class="nav-item">
+                            <asp:LinkButton CssClass="nav-link" ID="LinkButton6" runat="server" Visible="false" OnClick="LinkButton6_Click">Dash Board</asp:LinkButton></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact">Contact</a></li>
+                        <li class="nav-item">
+                            <asp:LinkButton CssClass="nav-link" ID="LinkButton1" runat="server" Visible="False" OnClick="LinkButton1_Click">Admin Work</asp:LinkButton></li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <asp:LinkButton CssClass="nav-link" ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">User Login</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton CssClass="nav-link" ID="LinkButton4" runat="server" OnClick="LinkButton4_Click">Admin Login</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active" style="margin-right:10px">
+                            <asp:LinkButton CssClass="nav-link" ID="LinkButton5" runat="server" Visible="False" OnClick="LinkButton5_Click">
+                            <asp:Label ID="StudentName" runat="server"></asp:Label>
+                            </asp:LinkButton>
+                        </li>
+                        <li class="nav-item active" style="margin-right:10px">
+                            <asp:LinkButton CssClass="nav-link btn btn-danger" ID="LinkButton3" runat="server" Visible="False" OnClick="LinkButton3_Click">
+                            Logout
+                            </asp:LinkButton>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+
+        </div>
+        <footer class="p-3 mb-2 text-white" style="background-color: midnightblue;">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-6">
+
+                            <section aria-labelledby="librariesTitle" style="margin-top: 80px">
+                                <h5>SOCIAL MEDIA </h5>
+                                <a href="#" role="button" style="margin-right: 10px">
+                                    <img src="images/facebook.png" width="40" height="40" style="border: 0;" />
+                                </a>
+                                <a href="#" role="button" style="margin-right: 10px">
+                                    <img src="images/youtube.png" width="40" height="40" style="border: 0;" />
+                                </a>
+                                <a href="#" role="button" style="margin-right: 10px">
+                                    <img src="images/instagram.png" width="40" height="40" style="border: 0;" />
+                                </a>
+                                <br />
+                                <br />
+                                <br>
+                                <h5>VIEW RESULT</h5>
+                                <div class="rectangle-container-footer">
+
+                                    <div class="rectangle-footer">
+                                        <asp:LinkButton CssClass="nav-link" ID="LinkButton7" runat="server" OnClick="LinkButton7_Click" Visible="true">Sign up</asp:LinkButton>
+                                    </div>
+                                </div>
+
+
+                            </section>
+
+                        </div>
+                        <div class="col-md-6">
+                            <section aria-labelledby="gettingStartedTitle" style="margin-right: 20px">
+                                <div class="card" style="width: 18rem; background-color: midnightblue; border: none">
+                                    <div style="width: 6rem">
+                                        <img src="images/location.png" class="card-img-top" alt="school" width="50" height="100">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text text-white" style="font-family: 'Century Gothic';">
+                                            Clover Grades<br />
+                                            Address: 180 Main St, Andover<br />
+                                            MA 01810 United States<br />
+                                            <abbr title="Phone">Ph:</abbr>
+                                            7810028486.<br />
+                                           <abbr title="Phone">Email:</abbr>
+                                            clovergrades441@gmail.com
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+
+    </form>
+    <style>
+        .rectangle-container-footer {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .rectangle-footer {
+            width: 150px;
+            height: 80px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            color: forestgreen;
+            font-weight: bold;
+            background-color: transparent; /* Transparent background */
+            border: 4px solid;
+            border-color: forestgreen;
+            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+        }
+    </style>
+</body>
+</html>
